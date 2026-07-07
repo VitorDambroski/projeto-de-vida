@@ -1,160 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap");
 
-:root{
-    --cor-de-fundo:#1E1E2F;
-    --verde:#4CAF50;
-    --branco:#FFFFFF;
-    --botao-ativo:#7C4DFF;
-    --botao-inativo:#3C3F58;
-    --texto-fundo:#2A2D45;
+:root {
+    --cor-de-fundo: #1e1e1e;
+    --verde: #00eeff;
+    --branco: #3fc9c9;
+    --botao-ativo: #149af3;
+    --botao-inativo: rgba(41, 42, 122, 0.5);
+    --texto-fundo: rgba(21, 17, 68, 0.3);
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:var(--cor-de-fundo);
-    color:var(--branco);
-    font-family:"Chakra Petch",sans-serif;
+body {
+    background: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: "Chakra Petch", sans-serif;
 }
 
-.conteudo-principal{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
+.conteudo-principal {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
-.titulo-principal{
-    font-size:32px;
-    margin-bottom:20px;
+.titulo-principal {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.titulo-principal span{
-    color:var(--verde);
+.titulo-principal span {
+    color: var(--verde);
 }
 
-.conteudo{
-    margin-top:20px;
+.botoes {
+    display: flex;
 }
 
-.botoes{
-    display:flex;
+.botao {
+    flex: 1;
+    padding: 25px;
+    border: none;
+    background: var(--botao-inativo);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: inherit;
 }
 
-.botao{
-    flex:1;
-    padding:20px;
-    border:none;
-    background:var(--botao-inativo);
-    color:white;
-    cursor:pointer;
-    font-size:18px;
-    font-family:inherit;
-    transition:.3s;
+.botao:first-child {
+    border-radius: 40px 0 0 0;
 }
 
-.botao:first-child{
-    border-radius:20px 0 0 0;
+.botao:last-child {
+    border-radius: 0 40px 0 0;
 }
 
-.botao:last-child{
-    border-radius:0 20px 0 0;
+.botao.ativo {
+    background: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
 }
 
-.botao:hover{
-    background:#5b60a8;
+.aba-conteudo {
+    display: none;
+    background: var(--texto-fundo);
+    min-height: 430px;
+    padding: 60px;
+    border-radius: 0 0 40px 40px;
 }
 
-.botao.ativo{
-    background:var(--botao-ativo);
-    border-bottom:4px solid var(--verde);
+.aba-conteudo.ativo {
+    display: block;
 }
 
-.aba-conteudo{
-    display:none;
-    background:var(--texto-fundo);
-    min-height:430px;
-    padding:50px;
-    border-radius:0 0 20px 20px;
+.aba-conteudo-titulo-principal {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 20px;
 }
 
-.aba-conteudo.ativo{
-    display:block;
+.aba-conteudo-titulo-secundario {
+    text-align: center;
+    color: var(--verde);
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 28px;
 }
 
-.aba-conteudo-titulo-principal{
-    text-align:center;
-    font-size:42px;
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 60px;
+    flex-wrap: wrap;
 }
 
-.aba-conteudo-titulo-secundario{
-    text-align:center;
-    color:var(--verde);
-    margin-top:30px;
-    text-transform:uppercase;
-    font-size:24px;
+.contador-digito {
+    text-align: center;
 }
 
-.contador{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin-top:50px;
-    flex-wrap:wrap;
+.contador-digito-numero {
+    font-size: 100px;
+    font-weight: 400;
 }
 
-.contador-digito{
-    text-align:center;
-}
-
-.contador-digito-numero{
-    font-size:90px;
-}
-
-.contador-digito-texto{
-    font-size:24px;
-    color:var(--verde);
-}
-
-@media (max-width:768px){
-
-    .botoes{
-        flex-direction:column;
-    }
-
-    .botao{
-        border-radius:0;
-    }
-
-    .botao:first-child{
-        border-radius:20px 20px 0 0;
-    }
-
-    .botao:last-child{
-        border-radius:0 0 20px 20px;
-    }
-
-    .aba-conteudo{
-        padding:30px;
-    }
-
-    .aba-conteudo-titulo-principal{
-        font-size:30px;
-    }
-
-    .contador{
-        gap:20px;
-    }
-
-    .contador-digito-numero{
-        font-size:60px;
-    }
-
-    .contador-digito-texto{
-        font-size:18px;
-    }
+.contador-digito-texto {
+    color: var(--verde);
+    font-size: 30px;
 }
